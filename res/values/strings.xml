@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, RadioServeionActivity!</string>
+    <string name="app_name">RadioServeion</string>
+    <string name="login_user_name_label">Username:</string>
+    <string name="login_user_pass_label">Password:</string>
+    <string name="login_button">LOGIN</string>
+    
+    <string name="notification_title">MBRadio.fm</string>
+    <string name="notification_message">Lo mejor de la musica latina\.\.\.</string>
+    <string name="user_code">67c6a1e7ce56d3d6fa748ab6d9af3fd7</string>
+    <string name="server_url">http://mbradio.fm</string>
+    <string name="lastfm_api_url">http://ws.audioscrobbler.com/2.0/</string>
+    <string name="lastfm_api_key">63e0ba9d53fffbc3c38592e70b2dd2ff</string>
+    
+</resources>

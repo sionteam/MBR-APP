@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frame_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:id="@+id/side_menu"
+        android:layout_width="220dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:background="@drawable/grain_v"
+        android:visibility="visible" >
+
+        <ListView
+            android:id="@+id/menu_listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:layout_weight="1"
+            android:cacheColorHint="#00000000"
+            android:drawSelectorOnTop="false"
+            android:divider="@drawable/fade_in_edge_vertical"
+            android:dividerHeight="8px">
+        </ListView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/main_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:background="@drawable/bg"
+        android:visibility="visible" >
+
+        <RelativeLayout
+            android:id="@+id/top_menu_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/top_menu_background" >
+
+            <ImageView
+                android:id="@+id/top_menu"
+                android:layout_width="48dp"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="3dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="3dp"
+                android:contentDescription="@string/app_name"
+                android:cropToPadding="true"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="0dp"
+                android:paddingTop="5dp"
+                android:scaleType="fitEnd"
+                android:src="@drawable/menu_icon" />
+
+            <RelativeLayout
+                android:id="@+id/top_menu_player_butttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/top_menu"
+                android:visibility="invisible" >
+
+                <ImageView
+                    android:id="@+id/top_menu_play"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/ic_play"
+                    android:contentDescription="@string/app_name" />
+
+                <ImageView
+                    android:id="@+id/top_menu_stop"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_alignParentLeft="false"
+                    android:layout_alignParentTop="false"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@+id/top_menu_play"
+                    android:background="@drawable/ic_stop"
+                    android:contentDescription="@string/app_name" />
+
+                <ImageView
+                    android:id="@+id/top_menu_mute"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@+id/top_menu_stop"
+                    android:background="@drawable/ic_mute_white"
+                    android:contentDescription="@string/app_name" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <radio.serveion.com.CustomViewPager
+            android:id="@+id/layout_pager"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/admob_banner"
+            android:layout_below="@+id/top_menu_layout" >
+
+        </radio.serveion.com.CustomViewPager>
+
+        <LinearLayout
+            android:id="@+id/admob_banner"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="#FF000000"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>

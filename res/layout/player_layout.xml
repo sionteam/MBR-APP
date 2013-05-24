@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/player_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="283dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/cd_boxes" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="210dp"
+            android:layout_height="210dp"
+            android:layout_marginLeft="54dp"
+            android:layout_marginTop="42dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/rock_en_esp" />
+
+        <SeekBar
+            android:id="@+id/volume_bar"
+            android:layout_width="228dp"
+            android:layout_height="23dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="45dp"
+            android:max="100"
+            android:minHeight="23dip"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:progress="25"
+            android:progressDrawable="@drawable/volume_bar"
+            android:thumb="@drawable/volume_bar_cursor" />
+
+        <!--
+             TextView
+            android:id="@+id/now_playing"
+            android:layout_width="228dp"
+            android:layout_height="26dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="24dp"
+            android:layout_marginLeft="45dp"
+            android:background="@drawable/now_playing_background"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:shadowColor="#ff565656"
+            android:text="NOW PLAYING... Here will appear the song name an artist as in current song from Shoutcast Server..."
+            android:textColor="#ffffffff"
+            android:textSize="16sp"
+            android:textStyle="bold" /
+        -->
+
+        <ProgressBar
+            android:id="@+id/loadingProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="false"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rating_layout"
+        android:layout_width="140dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="300dp"
+        android:background="@drawable/rating_background" >
+
+        <RelativeLayout
+            android:id="@+id/rating_content_horz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dp"
+                android:text="Rating" />
+
+            <RatingBar
+                android:id="@+id/ratingBar1"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/textView1"
+                android:isIndicator="true"
+                android:max="100"
+                android:numStars="5"
+                android:progress="85" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/artist_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/rating_layout"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="12dp" >
+
+        <ImageView
+            android:id="@+id/artist_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentLeft="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_artist" />
+
+        <TextView
+            android:id="@+id/artist_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/artist_icon"
+            android:text=" - "
+            android:textColor="#ffffffff" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/song_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/artist_layout"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="12dp" >
+
+        <ImageView
+            android:id="@+id/song_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentLeft="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_song" />
+
+        <TextView
+            android:id="@+id/song_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/song_icon"
+            android:text=" - "
+            android:textColor="#ffffffff" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/player_buttons_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/player_buttons_background" >
+
+        <ImageView
+            android:id="@+id/player_stop"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/ic_stop"
+            android:contentDescription="@string/app_name" />
+
+        <ImageView
+            android:id="@+id/player_play"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@+id/player_stop"
+            android:background="@drawable/ic_play"
+            android:contentDescription="@string/app_name" />
+        <ImageView
+            android:id="@+id/player_mute"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_toRightOf="@+id/player_stop"
+            android:background="@drawable/ic_mute_white"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            android:id="@+id/bitrate_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:text="96 kbps"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

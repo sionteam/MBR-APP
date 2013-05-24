@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport"
+	content="width=320, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="viewport"
+	content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=0;" />
+<meta name="viewport"
+	content="width=device-width, target-densityDpi=medium-dpi" />
+<title>RSS READER</title>
+<style type="text/css">
+body {
+	background: #222;
+}
+
+.rss-items
+{
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-size: 10pt;
+}
+
+.rss-items li
+{
+    margin: 0;
+    padding: 5px 0;
+    display: block;
+    padding: 2px 6px;
+    /*background: #222;*/
+    color: #eee;
+    text-decoration: none;
+    border-radius: 5px;
+    border-bottom: 1px solid #444;
+}
+.rss-items li:hover
+{
+    background: #444;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    /*cursor: pointer;*/
+} 
+
+.rss-items li div,a,p,span,font,h1,h2,h3{
+	color: #fff;
+}
+
+.index_rank{
+	width: 100%;
+	height: auto;	
+}
+
+.rss_images {
+	width: 68px;
+	height: 68px;
+	margin-right: 3px;
+	float: left; 
+}
+</style>
+</head>
+<body>
+
+	<div class="index_rank" style="overflow: hidden;" id="rss_container">
+		<ul class="rss-items">
+		__FEED_ITEMS__
+		</ul>
+	</div>
+</body>
+</html>

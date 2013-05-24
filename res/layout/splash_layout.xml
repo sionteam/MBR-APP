@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/splash_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_screen" >
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentTop="false"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="false"
+        android:layout_marginLeft="0dp" />
+
+    <TextView
+        android:id="@+id/status_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="false"
+        android:layout_below="@id/progressBar1"
+        android:layout_centerHorizontal="true"
+        android:background="#44000000"
+        android:padding="5dp"
+        android:text="Please wait while application is being updated."
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#FFFFFFFF" />
+
+    <ProgressBar
+        android:id="@+id/progress_horizontal"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="false"
+        android:layout_below="@+id/status_view"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:minHeight="8dip"
+        android:progress="0"
+        android:progressDrawable="@drawable/progress_bar"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/update_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/progress_horizontal"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="16dp"
+        android:text="Update App"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/update_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/update_ok"
+        android:layout_alignBottom="@+id/update_ok"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:text="Remind me next time"
+        android:visibility="invisible" />
+
+</RelativeLayout>
